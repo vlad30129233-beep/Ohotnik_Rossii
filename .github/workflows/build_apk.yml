@@ -15,6 +15,7 @@ jobs:
               unzip -q -o "$z"
             fi
           done
+          sed -i '/МОДАЛЬНОЕ ОКНО ЗУМА/d' app/src/main/java/ru/rusia/ohot293/MainActivity.kt
           cat << 'EOF' > build.gradle.kts
           plugins {
               id("com.android.application") version "8.4.2" apply false
